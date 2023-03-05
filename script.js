@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const form = document.getElementById("myForm");
 const messageDiv = document.getElementById("message");
 
@@ -15,3 +16,5 @@ form.addEventListener("submit", function(event) {
   }
 
 });
+=======
+>>>>>>> 5c3ece29e6c3bce4cf6718592df75fc06c2357f8
