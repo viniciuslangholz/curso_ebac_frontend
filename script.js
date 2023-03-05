@@ -1,23 +1,17 @@
-var btnComparar = document.getElementById("btnComparar");
-btnComparar.addEventListener("click", function() {
-  var num1 = document.getElementById("num1").value;
-  var num2 = document.getElementById("num2").value;
+const form = document.getElementById("myForm");
+const messageDiv = document.getElementById("message");
 
-  function compararNumeros(num1, num2) {
-    if (num1 === "" || num2 === "") {
-      alert("Por favor, preencha ambos os campos!");
-      return;
-    }
+form.addEventListener("submit", function(event) {
+  event.preventDefault();
+  const numA = Number(document.getElementById("numA").value);
+  const numB = Number(document.getElementById("numB").value);
 
-    if (num1 > num2) {
-      return num1 + " é maior que " + num2;
-    } else if (num1 < num2) {
-      return num2 + " é maior que " + num1;
-    } else {
-      return "Os números são iguais";
-    }
+  if (numB > numA) {
+    messageDiv.textContent = "Formulário válido!";
+    messageDiv.style.color = "green";
+  } else {
+    messageDiv.textContent = "O número B deve ser maior que o número A";
+    messageDiv.style.color = "red";
   }
 
-  var resultado = compararNumeros(num1, num2);
-  document.getElementById("resultado").innerHTML = resultado;
 });

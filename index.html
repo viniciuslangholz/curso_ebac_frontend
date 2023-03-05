@@ -11,29 +11,15 @@
     <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-    <header class="cabecalho">
-        <nav>
-            <ul>
-                <li><p>LNGZ.dev</p></li>
-                <li><p>Validador de valores</p></li>
-                <li><button type="submit">Modo escuro</button></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section>
-        <div class="titulo">
-            <h1>EBAC - Exercício do Módulo 7: Integrando HTML com JavaScript</h1>
-        </div>
-
-        <div class="formulario">
-            <form id="form_valores">
-                <label for="campoA">Digite um valor para o Campo A:</label>
-                <input type="number" id="campoA" required placeholder="Digite um número" />
-                <label for="campoA">Digite um valor para o Campo B:</label>
-                <input type="number" id="campoA" required placeholder="Digite um número" />
-            </form>
-        </div>
-    </section>
+    <h1>Validação de Formulário</h1>
+    <form action="" id="myForm">
+        <label for="numA">Campo A:</label>
+        <input type="number" id="numA" name="numA" required>
+        <label for="numB">Campo B:</label>
+        <input type="number" id="numB" name="numB" required>
+        <button type="submit" id="submitBtn">Processar</button>
+    </form>
+    <div id="message"></div>
+    <script src="script.js"></script>
 </body>
 </html>
